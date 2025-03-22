@@ -12,4 +12,9 @@ terraform {
     }
   }
 
+  backend "s3" {
+    bucket = "github-action-demo-rds"
+    key    = "github-action-demo.tfstate"
+    region = "us-east-1"
+  }
 }
